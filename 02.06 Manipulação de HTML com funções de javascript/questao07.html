@@ -3,8 +3,8 @@
     <body>
             <!-- Criando os campos do formulario-->
             Login: <input type="text" id="login"><br><br>
-            Senha: <input type="password" id="password" minlength="6" maxlength="10"><br><br>
-            Confirmar Senha: <input type="password" id="confirm_senha" minlength="6" maxlength="10"><br><br>
+            Senha: <input type="password" id="password"><br><br>
+            Confirmar Senha: <input type="password" id="confirm_senha"><br><br>
             <button id="bt" onclick="submit()">Confirmar</button>
 
         
@@ -25,6 +25,10 @@
                     //caso os campos senha e confirmar senha forem diferentes, emite a mensagem "senhas nao coonferem"
                     else if(senha != conf_senha){
                         alert("As senha nao conferem!");
+                    }
+                
+                    else if(senha < 6 || senha > 10){
+                        alert("A senha deve possuir entre 6 e 10 caracteres");
                     }
                     
                     //caso tudo esteja certo emite a mensagem "Cadastro Concluido"
